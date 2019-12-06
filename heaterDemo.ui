@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object class="tk.Frame" id="mainwindow">
+    <property name="background">#ffffff</property>
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <layout>
+      <property name="column">0</property>
+      <property name="propagate">True</property>
+      <property name="row">0</property>
+    </layout>
+    <child>
+      <object class="tk.Frame" id="CloudMainFrame">
+        <property name="background">#ffffff</property>
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="padx">15</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">e</property>
+        </layout>
+        <child>
+          <object class="tk.LabelFrame" id="CloudFrame">
+            <property name="background">#ffffff</property>
+            <property name="font">{Loma} 20 {}</property>
+            <property name="height">400</property>
+            <property name="text" translatable="yes">Cloud</property>
+            <property name="width">400</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="pady">25</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="tk.Frame" id="influxFrame">
+                <property name="background">#ffffff</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+                <child>
+                  <object class="ttk.Label" id="influxPic">
+                    <property name="borderwidth">0</property>
+                    <property name="image">Influxdb_logo.png</property>
+                    <property name="text" translatable="yes">Label_3</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                      <property name="sticky">nw</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Frame" id="Frame_5">
+                    <property name="background">#ffffff</property>
+                    <property name="height">200</property>
+                    <property name="width">200</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                    <child>
+                      <object class="tk.Canvas" id="canevasInflux">
+                        <property name="background">#ffffff</property>
+                        <property name="height">346</property>
+                        <property name="width">480</property>
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="propagate">True</property>
+                          <property name="row">0</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="tk.Label" id="Label_4">
+                        <property name="background">#ffffff</property>
+                        <property name="font">{loma} 12 {}</property>
+                        <property name="text" translatable="yes">27°C</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">0</property>
+                          <property name="sticky">nw</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="tk.Label" id="Label_8">
+                        <property name="background">#ffffff</property>
+                        <property name="font">{Loma} 12 {}</property>
+                        <property name="text" translatable="yes">23°C</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="propagate">True</property>
+                          <property name="row">0</property>
+                          <property name="sticky">sw</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Frame" id="mongoFrame">
+                <property name="background">#ffffff</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="padx">10</property>
+                  <property name="pady">10</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="mongopic">
+                    <property name="borderwidth">0</property>
+                    <property name="image">MongoDB_logo.png</property>
+                    <property name="text" translatable="yes">Label_13</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                      <property name="sticky">nw</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Text" id="lblMongo">
+                    <property name="font">TkDefaultFont</property>
+                    <property name="height">20</property>
+                    <property name="state">disabled</property>
+                    <property name="text" translatable="yes">{
+    "blocked": false,
+    "endpoint": {
+        "nodes": {
+            "myHeater": {
+                "implements": [],
+                "objects": {
+                    "temperatures": {
+                        "attributes": {
+                            "setPointTemperature": {
+                                "constraint": "SetPoint",
+                                "timestamp": -1.0,
+                                "type": "Number",
+                                "value": null
+                            },
+                            "temperature": {
+                                "constraint": "Measure",
+                                "timestamp": 1575547591858.0,
+                                "type": "Number",
+                                "value": 25.000000762939507
+                            }
+                        },
+                        "conforms": null,
+                        "objects": {}
+                    }
+                }
+            }
+        }
+    },
+    "endpointUuid": "bc0f1bf8-bdae-11e9-9cb5-2a2ae2dbcce4",
+    "friendlyName": "test",
+    "logLevel": "ERROR",
+    "online": false
+}
+
+</property>
+                    <property name="width">50</property>
+                    <property name="yscrollcommand">scrollBar.set</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Scrollbar" id="scrollBar">
+                    <property name="command">lblMongo.yview</property>
+                    <property name="orient">vertical</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="ipady">160</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="btnRefresh">
+                    <property name="image">Refresh.png</property>
+                    <property name="text" translatable="yes">Button_1</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                      <property name="sticky">ne</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="LogoFrame">
+        <property name="background">#ffffff</property>
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">nw</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="Label_23">
+            <property name="background">#ffffff</property>
+            <property name="font">{Loma} 24 {}</property>
+            <property name="text" translatable="yes">Heater Demo</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="Label_9">
+            <property name="background">#ffffff</property>
+            <property name="image">cloudiOLogo.png</property>
+            <property name="text" translatable="yes">
+</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">nw</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="EndpointUserFrame">
+        <property name="background">#ffffff</property>
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="padx">15</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">w</property>
+        </layout>
+        <child>
+          <object class="tk.LabelFrame" id="EndpointFrame">
+            <property name="background">#ffffff</property>
+            <property name="font">{loma} 20 {}</property>
+            <property name="height">200</property>
+            <property name="text" translatable="yes">Endpoint</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="tk.Label" id="endpointPic">
+                <property name="borderwidth">0</property>
+                <property name="cursor">arrow</property>
+                <property name="height">75</property>
+                <property name="height">75</property>
+                <property name="image">Heater.png</property>
+                <property name="text" translatable="yes">Label_11</property>
+                <property name="width">75</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Frame" id="Frame_8">
+                <property name="background">#ffffff</property>
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="Label_1">
+                    <property name="background">#ffffff</property>
+                    <property name="font">{Loma} 16 {}</property>
+                    <property name="text" translatable="yes">Ambiant Temperature: </property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="Label_2">
+                    <property name="background">#ffffff</property>
+                    <property name="font">{Loma} 16 {}</property>
+                    <property name="text" translatable="yes">Set Point temperature: </property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="lblAmbient">
+                    <property name="background">#ffffff</property>
+                    <property name="font">{Loma} 20 {}</property>
+                    <property name="text" translatable="yes">0</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="lblSetPoint">
+                    <property name="background">#ffffff</property>
+                    <property name="font">{Loma} 20 {}</property>
+                    <property name="text" translatable="yes">0</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="Label_5">
+                    <property name="background">#ffffff</property>
+                    <property name="font">{Loma} 16 {}</property>
+                    <property name="justify">left</property>
+                    <property name="pady">0</property>
+                    <property name="text" translatable="yes">°C</property>
+                    <layout>
+                      <property name="column">2</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="Label_6">
+                    <property name="background">#ffffff</property>
+                    <property name="font">{Loma} 16 {}</property>
+                    <property name="text" translatable="yes">°C</property>
+                    <layout>
+                      <property name="column">2</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="tk.LabelFrame" id="UserFrame">
+            <property name="background">#ffffff</property>
+            <property name="font">{Loma} 20 {}</property>
+            <property name="text" translatable="yes">User</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="pady">25</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+            <child>
+              <object class="tk.Frame" id="Frame_9">
+                <property name="background">#ffffff</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+                <child>
+                  <object class="tk.Spinbox" id="spinTemp">
+                    <property name="font">{Loma} 12 {}</property>
+                    <property name="format">%.1f</property>
+                    <property name="increment">0.1</property>
+                    <property name="to">27</property>
+                    <property name="values">23.0 23.1 23.2 23.3 23.4 23.5 23.6 23.7 23.8 23.9 24.0 24.1 24.2 24.3 24.4 24.5 24.6 24.7 24.8 24.9 25.0 25.1 25.2 25.3 25.4 25.5 25.6 25.7 25.8 25.9 26.0 26.1 26.2 26.3 26.4 26.5 26.6 26.7 26.8 26.9 </property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="Label_7">
+                    <property name="background">#ffffff</property>
+                    <property name="text" translatable="yes">°C</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Button" id="btnSetPoint">
+                    <property name="font">{Loma} 12 {}</property>
+                    <property name="padx">5</property>
+                    <property name="pady">5</property>
+                    <property name="text" translatable="yes">Send Set Point</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="pady">5</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Label" id="userPic">
+                <property name="borderwidth">0</property>
+                <property name="image">User.png</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
