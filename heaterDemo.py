@@ -17,8 +17,6 @@ endpointUUID = "bc0f1bf8-bdae-11e9-9cb5-2a2ae2dbcce4"
 
 credential = ('root', '')
 
-root = tk.Tk() 
-
 class Application:
     def __init__(self, master):
 
@@ -78,7 +76,7 @@ class Application:
         offsetX = float(w)/(nPoint-1)
         #defined canevas goes from 23 to 27°  
         delta = 27-23
-        incr = float(h)/delta     
+        incr = (float(h)-10)/delta     
         for i in range(delta):   
             self.canevasInflux.create_line(0, incr*i, w,  incr*i, dash=(4,4), fill="#d4d4d4")
         tab=tab[::-1]
@@ -86,16 +84,10 @@ class Application:
             self.canevasInflux.create_line(i*offsetX, incr*(delta-(tab[i]-23)), (i+1)*offsetX, incr*(delta-(tab[i+1]-23)))
         for i in range(nPoint-1):   
             self.create_circle((i+1)*offsetX, incr*(delta-(tab[i+1]-23)), 3, fill="black");
-            self.create_circle((i+1)*offsetX, incr*(delta-(tab[i+1]-23)), 2, fill="white");
-        
- 
-
-
-
-app = Application(root)      
+            self.create_circle((i+1)*offsetX, incr*(delta-(tab[i+1]-23)), 2, fill="white");  
   
 
-def requestLoop():
+def requestLoop(app):
     while(True):
         r = requests.request(method='get',url=baseURL+'getAttribute', auth=credential, json={"attributeTopic": endpointUUID+"/myHeater/temperatures/temperature"})
         parsedAttribute = json.loads(r.text)
@@ -113,16 +105,15 @@ def requestLoop():
         for point in points:
             formatedPoints.append(float(point[1]))
         
-        app.drawCanevas(formatedPoints)
-  
+        app.drawCanevas(formatedPoints)  
              
         sleep(1)
         
 
-if __name__ == '__main__':
-    
-
-    thread.start_new_thread(requestLoop,())
-    
-    
+if __name__ == '__main__': 
+    root = tk.Tk() 
+    root.title("cloud.iO Heater Demo")
+    app = Application(root)  
+    thread.start_new_thread(requestLoop,(app,))   
     root.mainloop()
+        
