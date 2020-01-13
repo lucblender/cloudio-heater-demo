@@ -459,4 +459,167 @@
       </object>
     </child>
   </object>
+  <object class="tk.Toplevel" id="paramWindow">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Frame" id="Frame_1">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object class="ttk.Entry" id="entryUrl">
+            <property name="font">{Loma} 12 {}</property>
+            <property name="text" translatable="yes">http://localhost:8081</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="entryUser">
+            <property name="font">{Loma} 12 {}</property>
+            <property name="text" translatable="yes">root</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="entryPassword">
+            <property name="font">{Loma} 12 {}</property>
+            <property name="show">•</property>
+            <property name="text" translatable="yes">123456</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="Label_3">
+            <property name="font">{Loma} 12 {}</property>
+            <property name="text" translatable="yes">cloud.iO Server URL</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="Label_10">
+            <property name="font">{Loma} 12 {}</property>
+            <property name="text" translatable="yes">User</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="Label_11">
+            <property name="font">{Loma} 12 {}</property>
+            <property name="text" translatable="yes">Password</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="entryUUID">
+            <property name="font">{loma} 12 {}</property>
+            <property name="text" translatable="yes">bc0f1bf8-bdae-11e9-9cb5-2a2ae2dbcce4</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="Label_12">
+            <property name="font">{loma} 12 {}</property>
+            <property name="text" translatable="yes">Endpoint UUID</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="btnSave">
+        <property name="font">{Loma} 11 {}</property>
+        <property name="text" translatable="yes">Save</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="aboutWindow">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Label" id="Label_13">
+        <property name="font">{Loma} 10 {}</property>
+        <property name="text" translatable="yes">This software is a demonstration of a smart heating system using cloud.iO. On this software is represented the two actors of cloud.iO, the endpoint and the user, and the cloud part with the two dtabase of cloud.iO : mongo db and influx db.
+
+This software is using the cloud.iO RESTfull api. It is needed to have a cloud.iO username and password to use this software and to have an instance of the cloud.iO core running. You may also need the demo java implementation fo the heater available in this cloudio-endpointHeater-demo repository.</property>
+        <property name="wraplength">250</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="padx">10</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="Label_14">
+        <property name="font">{Loma} 11 {}</property>
+        <property name="justify">center</property>
+        <property name="text" translatable="yes">Made by Lucas Bonvin
+lucasbonvin@hotmail.com</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+  </object>
 </interface>
